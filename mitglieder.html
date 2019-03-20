@@ -143,17 +143,44 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="inputName">Name</label>
-                            <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
-                                placeholder="Name eingeben">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputVorname">Vorname</label>
-                            <input type="vorname" class="form-control" id="inputVorname"
-                                placeholder="Vorname">
-                        </div>
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
+                            placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputVorname">Vorname</label>
+                        <input type="vorname" class="form-control" id="inputVorname" placeholder="Vorname">
+                    </div>
+                    </form>
+                    <div class="form-group">
+                        <label for="inputBirthdate">Geburtsdatum</label>
+                        <input type="date" class="form-control" id="inputBirthdate" aria-describedby="birthdateHelp"
+                            placeholder="TT.MM.JJJJ">
+                    </div>
+                    <div class="form-group">
+                        <label for="teamSelection">Team wählen</label>
+                        <select class="form-control" id="teamSelection">
+                            <option>Team 1</option>
+                            <option>Team 2</option>
+                            <option>Team 3</option>
+                            <option>Team 4</option>
+                            <option>Team 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stateFrom">Mitglied seit</label>
+                        <input type="date" class="form-control" id="inputStateFrom" placeholder="TT.MM.JJJJ">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Typ</label>
+                        <select class="form-control" id="typeSelection">
+                            <option>Spieler</option>
+                            <option>Trainer</option>
+                            <option>Vorstandsmitglied</option>
+                            <option>Mitglied</option>
+                        </select>
+                    </div>
                     </form>
                 </div>
                 <div class="modal-footer">
