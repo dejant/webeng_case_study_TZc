@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <!-- nav-bar -->
+    <!--upper nav-bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="main.html">HOME</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -47,17 +47,21 @@
         </div>
     </nav>
 
+    <!--main body-->
     <div class="container-fluid">
         <div class="row">
-            <!--Navigation Links-->
+            <!--left nav bar-->
             <div class="col-sm-left bg-dark mt-2">
                 <nav class="nav flex-column mt-2">
-                    <a class="nav-link text-light" href="#">MITGLIED ERFASSEN</a>
-                    <a class="nav-link text-light" href="#">MITGLIED ÄNDERN</a>
-                    <a class="nav-link text-light" href="#">MITGLIED LÖSCHEN</a>
+                    <a class="nav-link text-light" href="#" data-toggle="modal"
+                        data-target="#createMitarbeiter">MITGLIED ERFASSEN</a>
+                    <a class="nav-link text-light" href="#" data-toggle="modal"
+                        data-target="#changeMitarbeiter">MITGLIED ÄNDERN</a>
+                    <a class="nav-link text-light" href="#" data-toggle="modal"
+                        data-target="#deleteMitarbeiter">MITGLIED LÖSCHEN</a>
                 </nav>
             </div>
-            <!--Liste-->
+            <!--list-->
             <div class="col-sm mt-2">
                 <table class="table">
                     <thead class="thead-dark">
@@ -127,6 +131,38 @@
         </div>
     </div>
 
+    <!--modal components-->
+    <div class="modal fade" id="createMitarbeiter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">MITARBEITER ERFASSEN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
+                                placeholder="Name eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputVorname">Vorname</label>
+                            <input type="vorname" class="form-control" id="inputVorname"
+                                placeholder="Vorname">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ABBRECHEN</button>
+                    <button type="button" class="btn btn-primary">FERTIG</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
