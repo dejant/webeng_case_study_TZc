@@ -46,10 +46,6 @@ a:focus {
     margin: 40px 0;
 }
 
-#headerOben{
-    color: #ddd;
-}
-
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -152,6 +148,7 @@ a.article:hover {
 #content {
     width: 100%;
     padding: 20px;
+    padding-top: 0px;
     min-height: 100vh;
     transition: all 0.3s;
 }
