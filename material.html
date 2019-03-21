@@ -16,10 +16,10 @@
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
         crossorigin="anonymous"></script>
 
-    <title>MITGLIEDER</title>
+    <title>MATERIAL</title>
     <!-- title icon setzen -->
-    <link rel='shortcut icon' href='icons\user-friends-solid.svg' type='image/x-icon'>
-    <link rel='icon' href='icons\user-friends-solid.svg' type='image/x-icon'>
+    <link rel='shortcut icon' href='icons\volleyball-ball-solid.svg' type='image/x-icon'>
+    <link rel='icon' href='icons\volleyball-ball-solid.svg' type='image/x-icon'>
 
 </head>
 
@@ -44,7 +44,7 @@
                 <li>
                     <a href="main.html">HOME</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="mitglieder.html">MITGLIEDER</a>
                 </li>
                 <li>
@@ -53,7 +53,7 @@
                 <li>
                     <a href="raeume.html">RÄUME</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="material.html">MATERIAL</a>
                 </li>
                 <li>
@@ -87,13 +87,14 @@
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-toggle="modal"
-                                    data-target="#createMitarbeiter">MITGLIED ERFASSEN</a>
+                                    data-target="#createMitarbeiter">MATERIAL
+                                    ERFASSEN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">MITGLIED ÄNDERN</a>
+                                <a class="nav-link" href="#">MATERIAL ÄNDERN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">MITGLIED LÖSCHEN</a>
+                                <a class="nav-link" href="#">MATERIAL LÖSCHEN</a>
                             </li>
                         </ul>
                     </div>
@@ -106,12 +107,9 @@
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">NUMMER</th>
-                            <th scope="col">NACHNAME</th>
-                            <th scope="col">VORNAME</th>
-                            <th scope="col">GEBURTSDATUM</th>
-                            <th scope="col">TEAM</th>
-                            <th scope="col">MITGLIED SEIT</th>
-                            <th scope="col">TYP</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">BESCHREIBUNG</th>
+                            <th scope="col">Anzahl</th>
                             <th scope="col"> </th>
                         </tr>
                     </thead>
@@ -119,12 +117,9 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>01.01.1990</td>
-                            <td>Team 1</td>
-                            <td>01.01.2014</td>
-                            <td>Spieler</td>
+                            <td>Fussball</td>
+                            <td>adidas</td>
+                            <td>80</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -135,12 +130,9 @@
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>01.01.1990</td>
-                            <td>Team 4</td>
-                            <td>01.01.2014</td>
-                            <td>Spieler</td>
+                            <td>Überzieher</td>
+                            <td>adidas</td>
+                            <td>60</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -151,12 +143,9 @@
                         </tr>
                         <tr>
                             <th scope="row">3</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>01.01.1990</td>
-                            <td>Team 2</td>
-                            <td>01.01.2014</td>
-                            <td>Spieler</td>
+                            <td>Trinkflaschen</td>
+                            <td>10er Set</td>
+                            <td>12</td>
                             <td>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
