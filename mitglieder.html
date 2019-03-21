@@ -63,7 +63,7 @@
             </ul>
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#">HILFE</a>
+                    <a href="#" data-toggle="modal" data-target="#helpButton">HILFE</a>
                 </li>
             </ul>
         </nav>
@@ -104,7 +104,7 @@
             <!--list-->
             <div class="col-sm">
                 <table class="table table-hover">
-                    <thead class="thead-dark">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">Nummer</th>
                             <th scope="col">Nachname</th>
@@ -172,7 +172,44 @@
         </div>
     </div>
 
-    <!--modal components-->
+    <!--modal components (dialog)-->
+    <!----------------------------->
+
+    <!--modal HELP -->
+    <div class="modal fade" id="helpButton" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HILFE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Brauchst du Hilfe oder hast du Fragen?</p>
+                    <p>verein xyz</p>
+                    <p>
+                        Vereinsführung
+                        <br>
+                        Sportweg 13
+                        <br>
+                        8000 Zürich
+                    </p>
+
+                    <p>
+                        Tel 099 - 11 22 33
+                        <br>
+                        Fax 099 - 11 22 44
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schliessen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal CREATE MITARBEITER -->
     <div class="modal fade" id="createMitarbeiter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -232,6 +269,7 @@
         </div>
     </div>
 
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
