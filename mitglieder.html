@@ -6,61 +6,100 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <title>MITGLIEDER</title>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+    <title>HOME</title>
 
 </head>
 
 <body>
+    <!-- HEADER -->
     <div class="p-3 mb-2 bg-warning text-dark">
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <h1 class="text-center"> verein xyz</h1>
+                    <h1 class="text-center" id="headerOben">verein xyz</h1>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--upper nav-bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="main.html">HOME</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="mitglieder.html">MITGLIEDER<span
-                        class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="teams.html">TEAMS</a>
-                <a class="nav-item nav-link" href="raeume.html">RÄUME</a>
-                <a class="nav-item nav-link" href="material.html">MATERIAL</a>
-                <a class="nav-item nav-link" href="termine.html">TERMINE</a>
-                <a class="nav-item nav-link" href="hilfe.html">HILFE</a>
-            </div>
-        </div>
-    </nav>
+    <!-- HAUPTCONTENT -->
+    <div class="wrapper">
+        <!-- sidebar -->
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                <p>TASKS</p>
+                <li>
+                    <a href="main.html">HOME</a>
+                </li>
+                <li class="active">
+                    <a href="mitglieder.html">MITGLIEDER</a>
+                </li>
+                <li>
+                    <a href="#">TEAMS</a>
+                </li>
+                <li>
+                    <a href="#">RÄUME</a>
+                </li>
+                <li>
+                    <a href="#">MATERIAL</a>
+                </li>
+                <li>
+                    <a href="#">TERMINE</a>
+                </li>
+            </ul>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">HILFE</a>
+                </li>
+            </ul>
+        </nav>
 
-    <!--main body-->
-    <div class="container-fluid">
-        <div class="row">
-            <!--left nav bar-->
-            <div class="col-sm-left bg-dark mt-2">
-                <nav class="nav flex-column mt-2">
-                    <a class="nav-link text-light" href="#" data-toggle="modal"
-                        data-target="#createMitarbeiter">MITGLIED ERFASSEN</a>
-                    <a class="nav-link text-light" href="#" data-toggle="modal"
-                        data-target="#changeMitarbeiter">MITGLIED ÄNDERN</a>
-                    <a class="nav-link text-light" href="#" data-toggle="modal"
-                        data-target="#deleteMitarbeiter">MITGLIED LÖSCHEN</a>
-                </nav>
-            </div>
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info btn-dark">
+                        <i class="fas fa-align-left"></i>
+                        <span>MENÜ</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MITGLIED ERFASSEN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MITGLIED ÄNDERN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MITGLIED LÖSCHEN</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
             <!--list-->
             <div class="col-sm mt-2 table-responsive-sm">
                 <table class="table table-hover">
@@ -131,65 +170,6 @@
         </div>
     </div>
 
-    <!--modal components-->
-    <div class="modal fade" id="createMitarbeiter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">MITARBEITER ERFASSEN</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="inputName">Name</label>
-                        <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
-                            placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputVorname">Vorname</label>
-                        <input type="vorname" class="form-control" id="inputVorname" placeholder="Vorname">
-                    </div>
-                    </form>
-                    <div class="form-group">
-                        <label for="inputBirthdate">Geburtsdatum</label>
-                        <input type="date" class="form-control" id="inputBirthdate" aria-describedby="birthdateHelp"
-                            placeholder="TT.MM.JJJJ">
-                    </div>
-                    <div class="form-group">
-                        <label for="teamSelection">Team wählen</label>
-                        <select class="form-control" id="teamSelection">
-                            <option>Team 1</option>
-                            <option>Team 2</option>
-                            <option>Team 3</option>
-                            <option>Team 4</option>
-                            <option>Team 5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="stateFrom">Mitglied seit</label>
-                        <input type="date" class="form-control" id="inputStateFrom" placeholder="TT.MM.JJJJ">
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Typ</label>
-                        <select class="form-control" id="typeSelection">
-                            <option>Spieler</option>
-                            <option>Trainer</option>
-                            <option>Vorstandsmitglied</option>
-                            <option>Mitglied</option>
-                        </select>
-                    </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ABBRECHEN</button>
-                    <button type="button" class="btn btn-primary">FERTIG</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -199,6 +179,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
