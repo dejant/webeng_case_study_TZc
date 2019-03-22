@@ -90,10 +90,12 @@
                                     ERFASSEN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">TEAM ÄNDERN</a>
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#changeTeam">TEAM
+                                    ÄNDERN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">TEAM LÖSCHEN</a>
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#deleteTeam">TEAM
+                                    LÖSCHEN</a>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +106,7 @@
             <div class="container-fluid mb-3">
                 <div class="form-group row">
                     <div class="col-sm">
-                        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                        <input class="form-control" id="myInput" type="text" placeholder="Suche..">
                     </div>
                 </div>
             </div>
@@ -213,44 +215,61 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="inputName">Name</label>
+                        <label for="inputName">Team</label>
                         <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
                             placeholder="Name">
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ABBRECHEN</button>
+                    <button type="button" class="btn btn-primary">FERTIG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal CHANGE TEAM -->
+    <div class="modal fade" id="changeTeam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">TEAM ÄNDERN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <div class="form-group">
-                        <label for="inputVorname">Vorname</label>
-                        <input type="vorname" class="form-control" id="inputVorname" placeholder="Vorname">
+                        <label for="inputName">Team</label>
+                        <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
+                            placeholder="Name">
                     </div>
-                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ABBRECHEN</button>
+                    <button type="button" class="btn btn-primary">FERTIG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal DELETE TEAM -->
+    <div class="modal fade" id="deleteTeam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">TEAM LÖSCHEN</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <div class="form-group">
-                        <label for="inputBirthdate">Geburtsdatum</label>
-                        <input type="date" class="form-control" id="inputBirthdate" aria-describedby="birthdateHelp"
-                            placeholder="TT.MM.JJJJ">
+                        <label for="inputName">Team wirklich löschen?</label>
+                        <p>Name</p>
                     </div>
-                    <div class="form-group">
-                        <label for="teamSelection">Team wählen</label>
-                        <select class="form-control" id="teamSelection">
-                            <option>Team 1</option>
-                            <option>Team 2</option>
-                            <option>Team 3</option>
-                            <option>Team 4</option>
-                            <option>Team 5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="stateFrom">Mitglied seit</label>
-                        <input type="date" class="form-control" id="inputStateFrom" placeholder="TT.MM.JJJJ">
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Typ</label>
-                        <select class="form-control" id="typeSelection">
-                            <option>Spieler</option>
-                            <option>Trainer</option>
-                            <option>Vorstandsmitglied</option>
-                            <option>Mitglied</option>
-                        </select>
-                    </div>
-                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">ABBRECHEN</button>
