@@ -1,4 +1,4 @@
-Vue.component("mitglieder-liste", {
+Vue.component("mitglieder-card", {
     data: function () {
         return {
             user: {
@@ -12,7 +12,7 @@ Vue.component("mitglieder-liste", {
     },
     template: `
         <div class="card" style="width: 16rem;">
-            <b-card-img img-src="icons\portrait-solid.svg" class="card-img-top"></b-card-img>
+            <img src="icons\\portrait-solid.svg" class="card-img-top">
             <div class="card-body">
                     <table class="table table-sm">
                         <tbody>
@@ -51,16 +51,5 @@ Vue.component("mitglieder-liste", {
 var app = new Vue({
     el: '#mitglieder',
     data: {
-    }
-})
-
-var app = new Vue({
-    el: '#teams',
-    data: {
-        team: {
-            name: "Herren 1",
-            members: "22"
-        }
-
     }
 })
