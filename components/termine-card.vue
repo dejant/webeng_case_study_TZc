@@ -1,12 +1,13 @@
-Vue.component("mitglieder-card", {
+Vue.component("termine-card", {
     data: function () {
         return {
-            user: {
-                name: "Tomic",
-                lastName: "Dejan",
-                birthdate: "13.11.1990",
-                team: "Herren 1",
-                type: "Spieler"
+            termin: {
+                name: "Turnier",
+                description: "Junioren 1",
+                start: "01.05.2019",
+                end: "01.05.2019",
+                place: "Zürich",
+                map: "https://goo.gl/maps/JJ3JNC1GtCt",
             }
         }
     },
@@ -18,19 +19,31 @@ Vue.component("mitglieder-card", {
                         <tbody>
                             <tr>
                                 <td>NAME</td>
-                                <td>{{ user.name }} {{ user.lastName }}</td>
+                                <td>{{ termin.name }}</td>
                             </tr>
                             <tr>
-                                <td>GEBURTSDATUM</td>
-                                <td>{{ user.birthdate }}</td>
+                                <td>BESCHREIBUNG</td>
+                                <td>{{ termin.description }}</td>
                             </tr>
                             <tr>
-                                <td>TEAM</td>
-                                <td>{{ user.team }}</td>
+                                <td>START</td>
+                                <td>{{ termin.start }}</td>
                             </tr>
                             <tr>
-                                <td>TYP</td>
-                                <td>{{ user.type }}</td>
+                                <td>ENDE</td>
+                                <td>{{ termin.end }}</td>
+                            </tr>
+                            <tr>
+                                <td>ORT</td>
+                                <td>{{ termin.place }}</td>
+                            </tr>
+                            <tr>
+                                <td>MAP</td>
+                                <td>
+                                <a target="_blank" href="https://goo.gl/maps/JJ3JNC1GtCt">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                            </td>
                             </tr>
                         </tbody>
                     </table>
@@ -48,10 +61,8 @@ Vue.component("mitglieder-card", {
         </div>`
 })
 
-// Instanzen
-//
 var app = new Vue({
-    el: '#mitglieder',
+    el: '#termine',
     data: {
     }
 })

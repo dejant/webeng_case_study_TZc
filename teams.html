@@ -123,56 +123,36 @@
             </div>
 
             <!--list-->
-            <div class="col-sm" id="teams">
-                <table class="table table-hover">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col"> </th>
-                            <th scope="col">TEAM</th>
-                            <th scope="col">ANZAHL MITGLIEDER</th>
-                        </tr>
-                    </thead>
-                    <!-- Tabellenstart -->
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>{{ team.name }}</td>
-                            <td>{{ team.members }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>Herren 2</td>
-                            <td>24</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>Damen 1</td>
-                            <td>18</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="container-fluid mb-3" id="teams">
+                <div class="row">
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                </div>
+                <!-- beginn zweite zeile -->
+                <div class="row">
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                    <div class="col-sm">
+                        <team-card></team-card>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -307,7 +287,8 @@
         });
     </script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="scripts/app.js"></script>
+    <script src="components/team-card.vue"></script>
+
 </body>
 
 </html>

@@ -1,12 +1,9 @@
-Vue.component("mitglieder-card", {
+Vue.component("team-card", {
     data: function () {
         return {
-            user: {
-                name: "Tomic",
-                lastName: "Dejan",
-                birthdate: "13.11.1990",
-                team: "Herren 1",
-                type: "Spieler"
+            team: {
+                name: "Herren 1",
+                member: "24",
             }
         }
     },
@@ -18,19 +15,11 @@ Vue.component("mitglieder-card", {
                         <tbody>
                             <tr>
                                 <td>NAME</td>
-                                <td>{{ user.name }} {{ user.lastName }}</td>
+                                <td>{{ team.name }}</td>
                             </tr>
                             <tr>
-                                <td>GEBURTSDATUM</td>
-                                <td>{{ user.birthdate }}</td>
-                            </tr>
-                            <tr>
-                                <td>TEAM</td>
-                                <td>{{ user.team }}</td>
-                            </tr>
-                            <tr>
-                                <td>TYP</td>
-                                <td>{{ user.type }}</td>
+                                <td>MITGLIEDER</td>
+                                <td>{{ team.member }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -48,10 +37,8 @@ Vue.component("mitglieder-card", {
         </div>`
 })
 
-// Instanzen
-//
 var app = new Vue({
-    el: '#mitglieder',
+    el: '#teams',
     data: {
     }
 })

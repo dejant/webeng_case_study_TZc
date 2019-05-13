@@ -123,84 +123,21 @@
             </div>
 
             <!--list-->
-            <div class="col-sm">
-                <table class="table table-hover">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col"> </th>
-                            <th scope="col">NAME</th>
-                            <th scope="col">BESCHREIBUNG</th>
-                            <th scope="col">START</th>
-                            <th scope="col">ENDE</th>
-                            <th scope="col">ORT</th>
-                            <th scope="col">MAP</th>
-                        </tr>
-                    </thead>
-                    <!-- Tabellenstart -->
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>Turnier</td>
-                            <td>Junioren 1</td>
-                            <td>01.05.2019</td>
-                            <td>01.05.2019</td>
-                            <td>Winterthur</td>
-                            <td>
-                                <a target="_blank" href="https://goo.gl/maps/58A4dXmwDf52">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>Turnier</td>
-                            <td>Junioren 4</td>
-                            <td>16.08.2019</td>
-                            <td>16.08.2019</td>
-                            <td>Zürich</td>
-                            <td>
-                                <a target="_blank" href="https://goo.gl/maps/JJ3JNC1GtCt">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>Turnier</td>
-                            <td>Damen 1</td>
-                            <td>27.09.2019</td>
-                            <td>27.09.2019</td>
-                            <td>St. Gallen</td>
-                            <td>
-                                <a target="_blank" href="https://goo.gl/maps/GtKV6r5gNDP2">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="container-fluid mb-3" id="termine">
+                <div class="row">
+                    <div class="col-sm">
+                        <termine-card></termine-card>
+                    </div>
+                    <div class="col-sm">
+                        <termine-card></termine-card>
+                    </div>
+                    <div class="col-sm">
+                        <termine-card></termine-card>
+                    </div>
+                    <div class="col-sm">
+                        <termine-card></termine-card>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -385,6 +322,8 @@
             });
         });
     </script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="components/termine-card.vue"></script>
 </body>
 
 </html>
