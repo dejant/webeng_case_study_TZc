@@ -1,57 +1,38 @@
-Vue.component("mitglieder-card", {
-    data: function () {
-        return {
-            user: {
-                name: "Tomic",
-                lastName: "Dejan",
-                birthdate: "13.11.1990",
-                team: "Herren 1",
-                type: "Spieler"
-            }
-        }
-    },
-    template: `
-        <div class="card" style="width: 16rem;">
-            <img src="icons\\portrait-solid.svg" class="card-img-top">
-            <div class="card-body">
-                    <table class="table table-sm">
-                        <tbody>
-                            <tr>
-                                <td>NAME</td>
-                                <td>{{ user.name }} {{ user.lastName }}</td>
-                            </tr>
-                            <tr>
-                                <td>GEBURTSDATUM</td>
-                                <td>{{ user.birthdate }}</td>
-                            </tr>
-                            <tr>
-                                <td>TEAM</td>
-                                <td>{{ user.team }}</td>
-                            </tr>
-                            <tr>
-                                <td>TYP</td>
-                                <td>{{ user.type }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">DETAILS</button>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>`
-})
+/*
+This is the very beginning of scripts for vereinsverwaltung
 
-// Instanzen
+@authors:
+dejan tomic
+robin vifian
+nadja weilenmann
+patrik schmitt
+
+*/
+
+
+// Methoden
 //
-var app = new Vue({
-    el: '#mitglieder',
-    data: {
+
+// Filter
+//
+function searchFilter() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("mitgliederTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
     }
-})
+  }
+}

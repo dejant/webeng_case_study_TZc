@@ -161,6 +161,10 @@ a.article:hover {
     margin-bottom: 28pt;
 }
 
+tr {
+    cursor: pointer;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
