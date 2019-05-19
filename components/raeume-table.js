@@ -1,28 +1,21 @@
 // Instanzen
 //
 var app = new Vue({
-    el: '#teamsTable',
+    el: '#raeumeTable',
     data: {
-		team: {
-			id: null,
-			name: null,
-			anzahl: null
-		},
-        teams: [
-            { id: 1, name: "Torschützen", anzahl:'24'},
-            { id: 2, name: "Wegen dem Bier", anzahl:'12'},
-            { id: 3, name: "Nichtskönner", anzahl:'13'},
-            { id: 4, name: "1. Liga", anzahl:'18'},
-            { id: 5, name: "GCZ Rasenblockierer", anzahl:'19'},
-            { id: 6, name: "Feierabendrunde", anzahl:'11'}
+        raeume: [
+            { id: 1, name: "Mini-Fussballplatz", standort:'47.498272, 8.724794', flaeche:'24m2'},
+            { id: 2, name: "Fussballplatz", standort:'47.498272, 8.724794', flaeche:'84m2'},
+            { id: 3, name: "Micro-Fussballplatz", standort:'47.498272, 8.724794', flaeche:'8m2'},
+            { id: 4, name: "XXL-Fussballplatz", standort:'47.498272, 8.724794', flaeche:'100m2'}
         ]
     },
     computed: {
         "columns": function columns() {
-            if (this.teams.length == 0) {
+            if (this.raeume.length == 0) {
                 return [];
             }
-            return Object.keys(this.teams[0])
+            return Object.keys(this.raeume[0])
         }
     },
     methods: {
@@ -36,7 +29,7 @@ var app = new Vue({
 
             var ascending = this.ascending;
 
-            this.teams.sort(function (a, b) {
+            this.raeume.sort(function (a, b) {
                 if (a[col] > b[col]) {
                     return ascending ? 1 : -1
                 } else if (a[col] < b[col]) {
