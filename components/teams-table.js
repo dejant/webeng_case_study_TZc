@@ -3,11 +3,6 @@
 var app = new Vue({
     el: '#teamsTable',
     data: {
-		team: {
-			id: null,
-			name: null,
-			anzahl: null
-		},
         teams: [
             { id: 1, name: "Torschützen", anzahl:'24'},
             { id: 2, name: "Wegen dem Bier", anzahl:'12'},

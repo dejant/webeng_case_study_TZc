@@ -1,9 +1,9 @@
 // Instanzen
 //
 var app = new Vue({
-    el: '#materialTable',
+    el: '#materialienTable',
     data: {
-        teams: [
+        materialien: [
             { id: 1, name: "Fussbälle", beschreibung: "Bälle die mit dem Fuss getreten werden.", anzahl:'24'},
             { id: 2, name: "Tennisbälle", beschreibung: "Werden bei uns selten gebraucht", anzahl:'10'},
             { id: 3, name: "Medinzinbälle", beschreibung: "Für das schwere Training", anzahl:'8'},
@@ -12,10 +12,10 @@ var app = new Vue({
     },
     computed: {
         "columns": function columns() {
-            if (this.teams.length == 0) {
+            if (this.materialien.length == 0) {
                 return [];
             }
-            return Object.keys(this.teams[0])
+            return Object.keys(this.materialien[0])
         }
     },
     methods: {
@@ -29,7 +29,7 @@ var app = new Vue({
 
             var ascending = this.ascending;
 
-            this.teams.sort(function (a, b) {
+            this.materialien.sort(function (a, b) {
                 if (a[col] > b[col]) {
                     return ascending ? 1 : -1
                 } else if (a[col] < b[col]) {

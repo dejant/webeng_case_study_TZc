@@ -117,27 +117,27 @@
             <div class="container-fluid mb-3">
                 <div class="form-group row">
                     <div class="col-sm">
-                        <input class="form-control" id="myInput" type="text" placeholder="Suche..">
+                        <input class="form-control" id="myInput" type="text" onkeyup="searchFilterMaterial()"
+                            placeholder="Suche..">
                     </div>
                 </div>
             </div>
 
             <!--list-->
-            <div class="container-fluid mb-3" id="material">
-                <div class="row">
-                    <div class="col-sm">
-                        <material-card></material-card>
-                    </div>
-                    <div class="col-sm">
-                        <material-card></material-card>
-                    </div>
-                    <div class="col-sm">
-                        <material-card></material-card>
-                    </div>
-                    <div class="col-sm">
-                        <material-card></material-card>
-                    </div>
-                </div>
+            <div class="col-sm">
+                <table class="table table-hover" id="materialienTable">
+                    <thead class="thead-light">
+                        <tr class="header">
+                            <th v-for="col in columns" v-on:click="sortTable(col)">{{ col }}</th>
+                        </tr>
+                    </thead>
+                    <!-- Tabellenstart -->
+                    <tbody>
+                        <tr v-for="material in materialien" data-toggle="modal" data-target="#helpButton">
+                            <td v-for="col in columns">{{ material[col] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -296,7 +296,8 @@
         });
     </script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="components/material-card.vue"></script>
+    <script src="components\material-table.js"></script>
+    <script src="scripts\app.js"></script>
 </body>
 
 </html>
