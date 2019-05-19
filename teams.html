@@ -117,48 +117,38 @@
             <div class="container-fluid mb-3">
                 <div class="form-group row">
                     <div class="col-sm">
-                        <input class="form-control" id="myInput" type="text" placeholder="Suche..">
+                        <input class="form-control" id="myInput" type="text" onkeyup="searchFilterTeams()" 
+                        placeholder="Suche..">
                     </div>
                 </div>
             </div>
 
             <!--list-->
-            <div class="container-fluid mb-3" id="teams">
-                <div class="row">
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                </div>
-                <!-- beginn zweite zeile -->
-                <div class="row">
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                    <div class="col-sm">
-                        <team-card></team-card>
-                    </div>
-                </div>
+            <div class="col-sm">
+                <table class="table table-hover" id="teamsTable">
+                    <thead class="thead-light">
+                        <tr class="header">
+                            <th v-for="col in columns" v-on:click="sortTable(col)">{{ col }}</th>
+                        </tr>
+                    </thead>
+                    <!-- Tabellenstart -->
+                    <tbody>
+                        <tr v-for="team in teams" data-toggle="modal" data-target="#helpButton">
+                            <td v-for="col in columns">{{ team[col] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
-    <!-- modal components (dialog) -->
-    <!--modal HELP -->
+    <!--
+        
+        modal components (dialog)
+    
+    -->
+
+        <!--modal HELP -->
     <div class="modal fade" id="helpButton" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -286,8 +276,10 @@
             });
         });
     </script>
+
     <script src="https://unpkg.com/vue"></script>
-    <script src="components/team-card.vue"></script>
+    <script src="components\teams-table.js"></script>
+    <script src="scripts\app.js"></script>
 
 </body>
 
