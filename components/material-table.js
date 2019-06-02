@@ -41,7 +41,7 @@ var app = new Vue({
                 });
         },
         createMaterial: function () {
-            var data = { title: this.task.name };
+            var data = { title: this.material.name };
             axios.post('http://localhost:8080/material', data, this.config)
                 .then((response) => {
                     alert("Successfully created Material")

@@ -10,7 +10,19 @@ var app = new Vue({
             { id: 4, name: "1. Liga", anzahl:'18'},
             { id: 5, name: "GCZ Rasenblockierer", anzahl:'19'},
             { id: 6, name: "Feierabendrunde", anzahl:'11'}
-        ]
+        ],
+        team: {
+            id: null,
+            name: null
+        },
+        config: {
+            headers: {
+                'x-apikey': '5b2e750b0c346a20d90a5dda'
+            }
+        }
+    },
+    mounted: function () {
+        this.getTeam();
     },
     computed: {
         "columns": function columns() {
@@ -21,6 +33,26 @@ var app = new Vue({
         }
     },
     methods: {
+        getTeam: function () {
+            axios.get('http://localhost:8080/teams', this.config)
+                .then((response) => {
+                    this.teams = response.data;
+                })
+                .catch((response) => {
+                    console.log(error);
+                });
+        },
+        createTeam: function () {
+            var data = { title: this.team.name };
+            axios.post('http://localhost:8080/teams', data, this.config)
+                .then((response) => {
+                    alert("Successfully created Team")
+                    this.getTeam();
+                })
+                .catch((response) => {
+                    console.log(error);
+                });
+        },
         "sortTable": function sortTable(col) {
             if (this.sortColumn === col) {
                 this.ascending = !this.ascending;

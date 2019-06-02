@@ -3,14 +3,26 @@
 var app = new Vue({
     el: '#mitgliederTable',
     data: {
-        rows: [
+        mitglieder: [
             { id: 1, name: "Chandler Bing", phone: '305-917-1301', profession: 'IT Manager' },
             { id: 2, name: "Ross Geller", phone: '210-684-8953', profession: 'Paleontologist' },
             { id: 3, name: "Rachel Green", phone: '765-338-0312', profession: 'Waitress' },
             { id: 4, name: "Monica Geller", phone: '714-541-3336', profession: 'Head Chef' },
             { id: 5, name: "Joey Tribbiani", phone: '972-297-6037', profession: 'Actor' },
             { id: 6, name: "Phoebe Buffay", phone: '760-318-8376', profession: 'Masseuse' }
-        ]
+        ],
+        mitglied: {
+            id: null,
+            name: null
+        },
+        config: {
+            headers: {
+                'x-apikey': '5b2e750b0c346a20d90a5dda'
+            }
+        }
+    },
+    mounted: function () {
+        this.getMitglied();
     },
     computed: {
         "columns": function columns() {
@@ -21,6 +33,26 @@ var app = new Vue({
         }
     },
     methods: {
+        getMitglied: function () {
+            axios.get('http://localhost:8080/mitglieder', this.config)
+                .then((response) => {
+                    this.materialien = response.data;
+                })
+                .catch((response) => {
+                    console.log(error);
+                });
+        },
+        createMitglied: function () {
+            var data = { title: this.mitglied.name };
+            axios.post('http://localhost:8080/mitglieder', data, this.config)
+                .then((response) => {
+                    alert("Successfully created Mitglied")
+                    this.getMitglied();
+                })
+                .catch((response) => {
+                    console.log(error);
+                });
+        },
         "sortTable": function sortTable(col) {
             if (this.sortColumn === col) {
                 this.ascending = !this.ascending;
