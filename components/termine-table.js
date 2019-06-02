@@ -32,7 +32,7 @@ var app = new Vue({
     },
     methods: {
         getTermin: function () {
-            axios.get('http://localhost:8080/termine', this.config)
+            axios.get('http://localhost:8080/schedule', this.config)
                 .then((response) => {
                     this.termine = response.data;
                 })
@@ -42,7 +42,7 @@ var app = new Vue({
         },
         createTermin: function () {
             var data = { title: this.termin.name };
-            axios.post('http://localhost:8080/termine', data, this.config)
+            axios.post('http://localhost:8080/schedule', data, this.config)
                 .then((response) => {
                     alert("Successfully created Termin")
                     this.getTermin();

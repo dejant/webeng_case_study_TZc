@@ -34,7 +34,7 @@ var app = new Vue({
     },
     methods: {
         getMitglied: function () {
-            axios.get('http://localhost:8080/mitglieder', this.config)
+            axios.get('http://localhost:8080/member', this.config)
                 .then((response) => {
                     this.materialien = response.data;
                 })
@@ -44,7 +44,7 @@ var app = new Vue({
         },
         createMitglied: function () {
             var data = { title: this.mitglied.name };
-            axios.post('http://localhost:8080/mitglieder', data, this.config)
+            axios.post('http://localhost:8080/member', data, this.config)
                 .then((response) => {
                     alert("Successfully created Mitglied")
                     this.getMitglied();

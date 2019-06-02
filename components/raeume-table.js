@@ -32,7 +32,7 @@ var app = new Vue({
     },
     methods: {
         getRaum: function () {
-            axios.get('http://localhost:8080/raeume', this.config)
+            axios.get('http://localhost:8080/room', this.config)
                 .then((response) => {
                     this.raeume = response.data;
                 })
@@ -42,7 +42,7 @@ var app = new Vue({
         },
         createRaum: function () {
             var data = { title: this.raum.name };
-            axios.post('http://localhost:8080/raeume', data, this.config)
+            axios.post('http://localhost:8080/room', data, this.config)
                 .then((response) => {
                     alert("Successfully created Raum")
                     this.getRaum();

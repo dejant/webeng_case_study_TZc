@@ -34,7 +34,7 @@ var app = new Vue({
     },
     methods: {
         getTeam: function () {
-            axios.get('http://localhost:8080/teams', this.config)
+            axios.get('http://localhost:8080/team', this.config)
                 .then((response) => {
                     this.teams = response.data;
                 })
@@ -44,7 +44,7 @@ var app = new Vue({
         },
         createTeam: function () {
             var data = { title: this.team.name };
-            axios.post('http://localhost:8080/teams', data, this.config)
+            axios.post('http://localhost:8080/team', data, this.config)
                 .then((response) => {
                     alert("Successfully created Team")
                     this.getTeam();
