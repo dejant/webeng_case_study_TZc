@@ -133,7 +133,7 @@
                     </thead>
                     <!-- Tabellenstart -->
                     <tbody>
-                        <tr v-for="material in materialien" data-toggle="modal" data-target="#helpButton">
+                        <tr v-for="material in materialien">
                             <td v-for="col in columns">{{ material[col] }}</td>
                         </tr>
                     </tbody>
@@ -197,7 +197,7 @@
                     <div class="form-group">
                         <label for="inputName">Name</label>
                         <input type="name" class="form-control" id="inputName" aria-describedby="nameHelp"
-                            placeholder="Name">
+                            placeholder="Name" v-model="material.name">
                     </div>
                     <div class="form-group">
                         <label for="inputBeschreibung">Beschreibung</label>
@@ -211,7 +211,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">ABBRECHEN</button>
-                    <button type="button" class="btn btn-primary">FERTIG</button>
+                    <button type="button" class="btn btn-primary" v-on:click="createMaterial" data-dismiss="modal">FERTIG</button>
                 </div>
             </div>
         </div>

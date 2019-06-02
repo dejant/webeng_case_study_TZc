@@ -7,7 +7,7 @@ var app = new Vue({
             { id: 1, name: "Fussbälle", beschreibung: "Bälle die mit dem Fuss getreten werden.", anzahl: '24' },
             { id: 2, name: "Tennisbälle", beschreibung: "Werden bei uns selten gebraucht", anzahl: '10' },
             { id: 3, name: "Medinzinbälle", beschreibung: "Für das schwere Training", anzahl: '8' },
-            { id: 4, name: "Trickots", beschreibung: "Um unsere Mannschaft zu erkennen.", anzahl: '30' }
+            { id: 4, name: "Trikots", beschreibung: "Um unsere Mannschaft zu erkennen.", anzahl: '30' }
         ],
         material: {
             id: null,
