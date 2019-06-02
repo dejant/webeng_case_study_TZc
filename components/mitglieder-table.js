@@ -26,17 +26,17 @@ var app = new Vue({
     },
     computed: {
         "columns": function columns() {
-            if (this.rows.length == 0) {
+            if (this.mitglieder.length == 0) {
                 return [];
             }
-            return Object.keys(this.rows[0])
+            return Object.keys(this.mitglieder[0])
         }
     },
     methods: {
         getMitglied: function () {
             axios.get('http://localhost:8080/member', this.config)
                 .then((response) => {
-                    this.materialien = response.data;
+                    this.mitglieder = response.data;
                 })
                 .catch((response) => {
                     console.log(error);
